@@ -1,10 +1,11 @@
 let app = require('express')();
 let http = require('http').Server(app);
 const fetch = require("node-fetch");
+let PORT = process.env.port || 3000;
 
 const countries = ['Brazil', 'France', 'Germany', 'Italy', 'Spain', 'Sweden', 'USA'];
 
-http.listen(3000, function () {
+http.listen(PORT, function () {
     console.log('Server gestartet, listening on localhost:3000');
 });
 
