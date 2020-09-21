@@ -36,7 +36,6 @@ async function getData(param, ress) {
         }
     });
     let data = await res.json();
-    console.log(data);
     let parsedData = parseData(data);
     ress.send(parsedData);
 }
@@ -54,7 +53,6 @@ function parseData(data) {
         }
         currentDay = i.day;
     }
-    console.log(pData);
     let casesThisWeek = pData[1]["cases"] - pData[7]["cases"];
     let casesLastWeek = pData[8]["cases"] - pData[14]["cases"];
 
